@@ -886,21 +886,35 @@
 
     <!-- 6. PORTFOLIO SECTION -->
     <div id="portfolio">
-        <section class="relative bg-slate-50 text-slate-800 overflow-hidden py-10 lg:py-16 border-b border-slate-200">
+        <!-- SECTION: PORTFOLIO WITH PREMIUM LIGHT BUILDING BACKGROUND -->
+<section class="relative bg-slate-50 text-slate-800 overflow-hidden py-12 lg:py-20 border-b border-slate-200">
     
-    <!-- Gimmick Efek Cahaya Lembut -->
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- BRANDING BACKGROUND LAYER (Gambar Gedung Modern Bertema Terang / Light Mode) -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25" 
+             style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        
+        <!-- LIGHT BLUE-SLATE OVERLAY: Menjaga kontras kartu putih dan mempercantik latar belakang -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-50/90 via-blue-50/70 to-slate-50/95 backdrop-blur-[0.5px]"></div>
+        
+        <!-- DIGITAL MATRIX GRID PATTERN (Tema Siber Halus) -->
+        <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:25px_25px]"></div>
+        
+        <!-- Gimmick Efek Cahaya Lembut -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    </div>
 
-    
-
+    <!-- MAIN CONTAINER (Z-Index Teratas) -->
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         <!-- Header Section (Compact Center) -->
-        <div class="text-center max-w-3xl mx-auto space-y-1.5 mb-6">
-            <div class="inline-flex items-center space-x-1 bg-orange-50 border border-orange-200 px-2 py-0.5 rounded text-[9px] font-bold tracking-wider text-orange-600 uppercase">
+        <div class="text-center max-w-3xl mx-auto space-y-2 mb-8">
+            <div class="inline-flex items-center space-x-1 bg-orange-50 border border-orange-200 px-2.5 py-0.5 rounded text-[9px] font-bold tracking-wider text-orange-600 uppercase shadow-3xs">
                 Proven Track Record
             </div>
-            <h2 class="text-xl sm:text-3xl font-extrabold tracking-tight text-[#0A192F]">
+            <h2 class="text-xl sm:text-3xl font-extrabold tracking-tight text-[#0A192F] drop-shadow-2xs">
                 Portofolio & <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Mitra Strategis</span>
             </h2>
             <p class="text-[11px] sm:text-xs text-slate-500 font-light max-w-xs sm:max-w-md mx-auto">
@@ -908,115 +922,115 @@
             </p>
         </div>
 
-        <!-- CATEGORY TABS (Koreksi: Pasti Rata Tengah di HP & Desktop) -->
-        <div class="relative mb-5 border-b border-slate-200 w-full flex justify-center">
+        <!-- CATEGORY TABS -->
+        <div class="relative mb-6 border-b border-slate-200/80 w-full flex justify-center z-20">
             <div class="flex justify-center items-center space-x-2 pb-px w-full max-w-md">
-                <button onclick="switchPortTab('cat-res')" id="btn-cat-res" class="port-tab-btn flex-1 text-center py-2 text-xs font-bold border-b-2 border-orange-500 text-orange-600 whitespace-nowrap transition-all duration-200">
+                <button onclick="switchPortTab('cat-res')" id="btn-cat-res" class="port-tab-btn flex-1 text-center py-2 text-xs font-bold border-b-2 border-orange-500 text-orange-600 whitespace-nowrap transition-all duration-200 focus:outline-none">
                     Residensial
                 </button>
-                <button onclick="switchPortTab('cat-off')" id="btn-cat-off" class="port-tab-btn flex-1 text-center py-2 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-[#0A192F] whitespace-nowrap transition-all duration-200">
+                <button onclick="switchPortTab('cat-off')" id="btn-cat-off" class="port-tab-btn flex-1 text-center py-2 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-[#0A192F] whitespace-nowrap transition-all duration-200 focus:outline-none">
                     Perkantoran
                 </button>
-                <button onclick="switchPortTab('cat-pub')" id="btn-cat-pub" class="port-tab-btn flex-1 text-center py-2 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-[#0A192F] whitespace-nowrap transition-all duration-200">
+                <button onclick="switchPortTab('cat-pub')" id="btn-cat-pub" class="port-tab-btn flex-1 text-center py-2 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-[#0A192F] whitespace-nowrap transition-all duration-200 focus:outline-none">
                     Publik
                 </button>
             </div>
         </div>
 
-        <!-- PORTFOLIO CONTENTS (Grid 2 Kolom Super Padat) -->
-        <div class="relative w-full">
+        <!-- PORTFOLIO CONTENTS (Grid Terintegrasi dengan Background Efek Glass) -->
+        <div class="relative w-full z-10">
             
             <!-- 1. KATEGORI: RESIDENSIAL -->
             <div id="content-cat-res" class="port-tab-content block animate-fade-in">
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Apartment</span>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Apartment</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari Sudirman</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Jakarta</span>
+                                <span class="truncate font-medium">Jakarta</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Apartment</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Apartment</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari Semanggi</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Jakarta</span>
+                                <span class="truncate font-medium">Jakarta</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Premium Res</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Premium Res</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari Hive</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Jakarta</span>
+                                <span class="truncate font-medium">Jakarta</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Airport Hub</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Airport Hub</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari Skylounge</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Tangerang</span>
+                                <span class="truncate font-medium">Tangerang</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Apartment</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Apartment</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari La Grande</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Bandung</span>
+                                <span class="truncate font-medium">Bandung</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">High-rise</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">High-rise</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari Panoramic</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Bandung</span>
+                                <span class="truncate font-medium">Bandung</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Condo Hotel</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Condo Hotel</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari De Papilio</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Surabaya</span>
+                                <span class="truncate font-medium">Surabaya</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Exclusive</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Exclusive</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Darmo Hill</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Surabaya</span>
+                                <span class="truncate font-medium">Surabaya</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Residential</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Residential</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Jasmine Park</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Bogor</span>
+                                <span class="truncate font-medium">Bogor</span>
                             </div>
                         </div>
                                     </div>
@@ -1024,35 +1038,35 @@
 
             <!-- 2. KATEGORI: PERKANTORAN -->
             <div id="content-cat-off" class="port-tab-content hidden animate-fade-in">
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Corporate HQ</span>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Corporate HQ</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Wika Tower I & II</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Jakarta</span>
+                                <span class="truncate font-medium">Jakarta</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Business Ctr</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Business Ctr</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari Hive Office</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Jakarta</span>
+                                <span class="truncate font-medium">Jakarta</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Premium Off</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Premium Off</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Tamansari Parama Office</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Jakarta</span>
+                                <span class="truncate font-medium">Jakarta</span>
                             </div>
                         </div>
                                     </div>
@@ -1060,25 +1074,25 @@
 
             <!-- 3. KATEGORI: FASILITAS PUBLIK -->
             <div id="content-cat-pub" class="port-tab-content hidden animate-fade-in">
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Retail Mall</span>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Retail Mall</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Jembatan Merah Plaza</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Surabaya</span>
+                                <span class="truncate font-medium">Surabaya</span>
                             </div>
                         </div>
-                                            <div class="bg-white p-2.5 rounded border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-orange-500/40 hover:shadow-xs transition-all duration-200">
-                            <div class="space-y-0.5">
-                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-semibold block">Trade Center</span>
+                                            <div class="bg-white/90 backdrop-blur-xs p-3 rounded border border-slate-200/80 shadow-2xs flex flex-col justify-between hover:border-orange-500/50 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+                            <div class="space-y-1">
+                                <span class="text-[8px] font-mono tracking-wider text-orange-600 uppercase font-bold block">Trade Center</span>
                                 <h4 class="text-[11px] font-bold text-[#0A192F] tracking-wide leading-tight line-clamp-2">Pusat Grosir Surabaya</h4>
                             </div>
-                            <div class="text-[9px] text-slate-400 pt-1.5 flex items-center space-x-1 border-t border-slate-100 mt-1.5">
+                            <div class="text-[9px] text-slate-400 pt-2 flex items-center space-x-1 border-t border-slate-100 mt-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
-                                <span class="truncate">Surabaya</span>
+                                <span class="truncate font-medium">Surabaya</span>
                             </div>
                         </div>
                                     </div>
@@ -1209,6 +1223,42 @@
     </div>
 </footer>    </div>
 
+    <!-- Tambahkan baris ini -->
+    <!-- SCROLL TO TOP BUTTON -->
+<button 
+    id="scrollTopBtn" 
+    onclick="scrollToTop()"
+    class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-white border border-slate-200 shadow-xl opacity-0 invisible transition-all duration-300 hover:scale-110 hover:border-orange-500 group"
+    aria-label="Kembali ke Atas"
+>
+    <!-- Ikon Panah ke Atas -->
+    <svg class="w-5 h-5 text-slate-600 group-hover:text-orange-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+</button>
+
+<script>
+    // Logika Show/Hide Tombol
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollBtn.classList.remove("opacity-0", "invisible");
+            scrollBtn.classList.add("opacity-100", "visible");
+        } else {
+            scrollBtn.classList.add("opacity-0", "invisible");
+            scrollBtn.classList.remove("opacity-100", "visible");
+        }
+    };
+
+    // Fungsi Scroll ke Atas
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
 
 </body>
 </html>
